@@ -1,0 +1,17 @@
+package com.example.hodhod.daggerpractice.di.main;
+
+import com.example.hodhod.daggerpractice.ui.main.posts.PostsFragment;
+import com.example.hodhod.daggerpractice.ui.main.profile.ProfileFragment;
+
+import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
+
+@Module
+public abstract class MainFragmentBuildersModule {
+
+    @ContributesAndroidInjector
+    abstract ProfileFragment contributeProfileFragment();
+
+    @ContributesAndroidInjector
+    abstract PostsFragment contributePostsFragment();
+}
